@@ -1,0 +1,32 @@
+body {
+	width: 100%;
+
+}
+
+.card {
+	height: 300px;
+}
+
+.card-img-top {
+	height: 300px;
+	width: 75%;
+	position: relative;
+	left: 45px;
+
+}
+
+.card-btn {
+	display: block;
+	position: relative;
+	left: 87.5px;
+	top: 127px;
+
+} 
+
+
+.zonk {
+ 	position: relative;
+ 	left: 29px;
+ 	top: 25px;
+}
+
