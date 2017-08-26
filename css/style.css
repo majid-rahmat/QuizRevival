@@ -43,3 +43,49 @@ img[src="assets/EmpireState_Question1.jpg"] {
 	height: 500px;
 	width: 100%;
 }
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.btn-block {
+	margin-top: 30px;
+	text-align: left;
+	width: 75%;
+}
+
+.next-btn {
+	position: absolute;
+	right: 25%;
+	top: 120%;
+
+}
+
+h3 {
+	margin-top: 0px;
+	width: 75%;
+}
+
+ul li:first-child > button {
+	margin-top: 45px;
+}
+
+.col-md-8 {
+	padding-left: 5%;
+}
+
+.question1 {
+	display: none;
+}
+
+img[src="http://imgc.allpostersimages.com/images/P-473-488-90/61/6173/LSQG100Z/posters/moon-over-reynolds-building-winston-salem-north-carolina.jpg"] {
+	float: left;
+}
+
+#first-explanation {
+	line-height: 1.5em;
+	padding-top: 5px; 
+	padding-bottom: 30px;
+}
