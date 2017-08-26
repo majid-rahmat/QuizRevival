@@ -15,7 +15,7 @@
 <div class="row">
 
     
-  	<div class="col-md-4">
+  	<div class="col-md-4 card-col">
       <div class="card" >
         <div class="front"> 
     		<img class="card-img-top" src="https://media.giphy.com/media/SufoKsersIO2Y/giphy.gif" alt="Card image cap">
@@ -28,7 +28,7 @@
       
     
     
-      <div class="col-md-4">
+      <div class="col-md-4 card-col">
       <div class="card" >
         <div class="front"> 
     		<img class="card-img-top" src="https://media.giphy.com/media/SufoKsersIO2Y/giphy.gif" alt="Card image cap">
@@ -40,17 +40,56 @@
      	</div>
       
     
-      <div class="col-md-4">
+      <div class="col-md-4 card-col">
       <div class="card" >
         <div class="front"> 
     		<img class="card-img-top" src="https://media.giphy.com/media/SufoKsersIO2Y/giphy.gif" alt="Card image cap">
   		</div> 
   		<div class="back" id="card3">
-    		
-  		</div>
+    	</div>
         </div>
         </div>
     
+    	<div class="col-md-4 question1">
+    		<img src="assets/EmpireState_Question1.jpg" alt="an image of the Empire State building" >
+    	</div>
+
+    	<div class="col-md-8 question1">
+    		<h3>
+    			What structure was the design inspiration for the Empire State Building?
+    		</h3>
+    		<ul>
+    		<li><button class="btn btn-lg btn-block btn-primary wrong" type="button" > The White House </button></li>
+    		<li><button class="btn btn-lg btn-block btn-primary wrong" type="button"> Sears Tower</button></li></li>
+    		<li><button class="btn btn-lg btn-block btn-primary" type="button" id="correct-answer"> Reynolds Building</button></li></li>
+    		<li><button class="btn btn-lg btn-block btn-primary wrong" type="button"  > Chrysler Building</button></li></li>
+    		</ul>
+    		<button class="btn btn-success btn-lg next-btn" type="button">Next Question</button>
+    	</div>
+
+    	<!-- Modal -->
+		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  			<div class="modal-dialog modal-lg" role="document">
+    		<div class="modal-content">
+      		<div class="modal-header">
+        	<h2 class="modal-title" id="exampleModalLabel">Correct! / Incorrect!</h2>
+        	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <img src="http://imgc.allpostersimages.com/images/P-473-488-90/61/6173/LSQG100Z/posters/moon-over-reynolds-building-winston-salem-north-carolina.jpg" alt="">
+        <h4 id="first-explanation">When completed as the headquarters of R. J. Reynolds Tobacco Company, it was the tallest building in the United States south of Baltimore, Maryland, and it won a national architecture award. The building is well known for being a design inspiration for the much larger Empire State Building that was built in 1931 in New York City. Every year the staff of the Empire State Building sends a Father's Day card to the staff at the Reynolds Building in Winston-Salem to pay homage to its role as predecessor to the Empire State Building.</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 </div> 
 </div>
@@ -61,9 +100,11 @@
 
 
 
+
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="js/questions.js"></script>
 	<script src="js/app.js"></script>
 </body>
