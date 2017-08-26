@@ -28,5 +28,11 @@ $(".card").flip();
 
 shuffleCards();
 
+$(".card-btn").click(function (){
+	$(".card-col").fadeOut(1000);
+});
+
+
+
 
 });

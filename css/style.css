@@ -3,8 +3,12 @@ body {
 
 }
 
+h1 {
+	text-align: center;
+}
 .card {
 	height: 300px;
+	margin-top: 102px ;
 }
 
 .card-img-top {
@@ -30,3 +34,12 @@ body {
  	top: 25px;
 }
 
+.jumbotron {
+	margin-top: 50px;
+	height: 600px;
+}
+
+img[src="assets/EmpireState_Question1.jpg"] {
+	height: 500px;
+	width: 100%;
+}
