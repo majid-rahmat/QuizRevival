@@ -50,29 +50,29 @@
         </div>
         </div>
     
-    	<div class="col-md-4 question1">
-    		<img src="assets/EmpireState_Question1.jpg" alt="an image of the Empire State building" >
+    	<div class="col-md-4 question">
+    		<img id="questionPic" src="assets/EmpireState_Question1.jpg" alt="an image of the Empire State building" >
     	</div>
 
-    	<div class="col-md-8 question1">
-    		<h3>
+    	<div class="col-md-8 question">
+    		<h3 id="quizQuestion">
     			What structure was the design inspiration for the Empire State Building?
     		</h3>
     		<ul>
-    		<li><button class="btn btn-lg btn-block btn-primary wrong" type="button" > The White House </button></li>
-    		<li><button class="btn btn-lg btn-block btn-primary wrong" type="button"> Sears Tower</button></li></li>
-    		<li><button class="btn btn-lg btn-block btn-primary" type="button" id="correct-answer"> Reynolds Building</button></li></li>
-    		<li><button class="btn btn-lg btn-block btn-primary wrong" type="button"  > Chrysler Building</button></li></li>
+    		<li id="choice0"><button class="btn btn-lg btn-block btn-primary wrong" type="button" > The White House </button></li>
+    		<li id="choice1"><button class="btn btn-lg btn-block btn-primary wrong" type="button"> Sears Tower</button></li></li>
+    		<li id="choice2"><button class="btn btn-lg btn-block btn-primary" type="button" id="correct-answer"> Reynolds Building</button></li></li>
+    		<li id="choice3"><button class="btn btn-lg btn-block btn-primary wrong" type="button"  > Chrysler Building</button></li></li>
     		</ul>
-    		<button class="btn btn-success btn-lg next-btn" type="button">Next Question</button>
+    		<button class="btn btn-success btn-lg next-btn" disabled type="button">Next Question</button>
     	</div>
 
     	<!-- Modal -->
-		<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   			<div class="modal-dialog modal-lg" role="document">
     		<div class="modal-content">
       		<div class="modal-header">
-        	<h2 class="modal-title" id="exampleModalLabel">Correct! / Incorrect!</h2>
+        	<h2 class="modal-title" id="ModalLabel">Correct! / Incorrect!</h2>
         	<button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
