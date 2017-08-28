@@ -44,6 +44,11 @@ img[src="assets/EmpireState_Question1.jpg"] {
 	width: 100%;
 }
 
+img[src="http://www.vectordiary.com/isd_tutorials/088-tea-cup/tea-cup.jpg"] {
+	width: 100%;
+
+}
+
 ul {
 	list-style-type: none;
 	margin: 0;
@@ -88,4 +93,9 @@ img[src="http://imgc.allpostersimages.com/images/P-473-488-90/61/6173/LSQG100Z/p
 	line-height: 1.5em;
 	padding-top: 5px; 
 	padding-bottom: 30px;
+}
+
+#questionPic {
+	width: 100%;
+	min-height: 350px;
 }
