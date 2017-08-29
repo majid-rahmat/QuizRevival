@@ -42,5 +42,5 @@ var questions = [
          explanation: "The term “murder” was used to describe a flock of crows as far back as the 15th century, according to the Oxford English Dictionary.",
          image_q: "http://i.dailymail.co.uk/i/pix/2011/12/29/article-2079644-0F4A684F00000578-461_634x721.jpg",
          image_a: "http://s2.quickmeme.com/img/78/782a39098bc6501556a37be9ca9684fc7df9b26f68b8af799adf2141145e333a.jpg"
-        },
+        }
 ]
