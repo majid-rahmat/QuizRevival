@@ -30,11 +30,16 @@ $(".card").flip();
 
 shuffleCards();
 
-$(".card-btn").click(function (){
-	$(".card-col").hide();
+function newGame() {
+$(".card-col").hide();
 	var b = document.getElementsByClassName("question");
     $(b).fadeIn(1000);
+};
+
+$(".card-btn").click(function (){
+	newGame();
 });
+
 
 $(".next-btn").click(function() {
 	console.log("here kitty kitty");
@@ -84,5 +89,19 @@ $(".score").on('click','button', function(){
 		$(".card").flip(false);
 		$('.card-col').show();
 		shuffleCards();
+		count=0;
+		score=0;
+		$("#questionPic").attr({'src': questions[count]["image_q"], 'id': 'questionPic', 'alt': 'an image of the Empire State building'});
+		$("#quizQuestion").html(questions[count]["question"]);
+		for (var i=0; i<4; i++) {
+			$("#choice"+i).children('button').html(questions[count]["choices"][i]);
+			$("#choice"+i).children('button').attr({'class': "btn btn-lg btn-block btn-primary answer-btn", 'disabled': false, 'type':"button"});
+		}
+		$(".next-btn").attr({'class': "btn btn-success btn-lg next-btn", "disabled": true, 'type': "button"});
+		$(".modal-body").find("img").attr('src', questions[count]["image_a"]);
+		$("#explanation").html(questions[count]["explanation"]);
+		$(".card-btn").click(function (){
+		newGame();
+		});
 });
 });
