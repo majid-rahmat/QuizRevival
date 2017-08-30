@@ -35,8 +35,8 @@ function newGame() {
 $(".card-col").hide();
 	var b = document.getElementsByClassName("question");
     $(b).fadeIn(1000);
-    $(".progress-bar").css('width', (((count+1)/questions.length)*75)+"%");
-
+    $(".progress-bar").css({'width': (((count+1)/questions.length)*75)+"%", 'visibility': 'visible'});
+    $(".progress-bar-border").css('visibility', 'visible');
 };
 
 $(".card-btn").click(function (){
@@ -87,6 +87,8 @@ $(".modal").on('click','button', function(){
 		$(".question").hide();
 		$('#score-info').html("Congratulations on completing the quiz! Your score is " + score  + "/" + questions.length + ".");
 		$('.score').show();
+		$(".progress-bar").css({'visibility': 'hidden', 'width': 0});
+		$(".progress-bar-border").css('visibility', 'hidden');
 	}
 });
 
