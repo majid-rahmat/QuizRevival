@@ -6,6 +6,26 @@ body {
 h1 {
 	text-align: center;
 }
+
+.progress-bar-border {
+	width: 75%;
+	border: 1px solid black;
+	height: 20px;
+	margin: 0 auto;
+	margin-top: 40px;
+	border-radius: 6%;
+}
+
+.progress-bar {
+	width: 0%;
+	background-color: red;
+	height: 20px;
+	border-radius: 6%;
+	position: relative;
+	left: 12.5%;
+	top: 30px;
+}
+
 .card {
 	height: 300px;
 	margin-top: 102px ;
@@ -35,7 +55,7 @@ h1 {
 }
 
 .jumbotron {
-	margin-top: 50px;
+	margin-top: 10px;
 	height: 600px;
 }
 
