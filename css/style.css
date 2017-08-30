@@ -1,11 +1,46 @@
-body {
-	width: 100%;
-
-}
-
+/* typography */
 h1 {
 	text-align: center;
+	font-family: "Sedgwick Ave Display";
+	font-size: 4em;
 }
+
+.question {
+	font-family: "Acme";
+	letter-spacing: 0.05em;
+}
+
+.question button {
+	font-family: "Acme";
+	letter-spacing: 0.075em;
+	text-align: center;
+}
+
+/* progress bar: sizing, positioning, styling and initial visibility*/
+.progress-bar-border {
+	width: 75%;
+	border: 1px solid black;
+	height: 20px;
+	margin: 0 auto;
+	margin-top: 20px;
+	border-radius: 6%;
+	visibility: hidden;
+}
+
+.progress-bar {
+	width: 0%;
+	background: #7b4397;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #dc2430, #7b4397);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #dc2430, #7b4397); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	height: 20px;
+	border-radius: 6%;
+	position: relative;
+	left: 12.5%;
+	top: 10px;
+	visibility: hidden;
+}
+
+/* sizing and positioning for the play cards (front and back) */
 .card {
 	height: 300px;
 	margin-top: 102px ;
@@ -16,7 +51,6 @@ h1 {
 	width: 75%;
 	position: relative;
 	left: 45px;
-
 }
 
 .card-btn {
@@ -24,9 +58,7 @@ h1 {
 	position: relative;
 	left: 87.5px;
 	top: 127px;
-
 } 
-
 
 .zonk {
  	position: relative;
@@ -34,42 +66,40 @@ h1 {
  	top: 25px;
 }
 
+
 .jumbotron {
-	margin-top: 50px;
+	margin-top: 20px;
 	height: 600px;
 }
 
+/* first question image needs it's own specific styling */
 img[src="assets/EmpireState_Question1.jpg"] {
 	height: 500px;
-	width: 100%;
 }
 
-img[src="http://www.vectordiary.com/isd_tutorials/088-tea-cup/tea-cup.jpg"] {
-	width: 100%;
+/* sizing and positioning for question image, question and it's answer choices */
+.question {
+	display: none;
+}
 
+#questionPic {
+	width: 100%;
+	min-height: 350px;
+}
+
+h3 {
+	margin: 0px auto;
+	width: 75%;
 }
 
 ul {
 	list-style-type: none;
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
 }
 
 .btn-block {
-	margin-top: 30px;
-	text-align: left;
-	width: 75%;
-}
-
-.next-btn {
-	position: absolute;
-	right: 25%;
-	top: 120%;
-
-}
-
-h3 {
-	margin-top: 0px;
+	margin: 30px auto 0 auto;
 	width: 75%;
 }
 
@@ -77,16 +107,28 @@ ul li:first-child > button {
 	margin-top: 45px;
 }
 
-.col-md-8 {
-	padding-left: 5%;
+/* positioning for next-question button */
+.next-btn {
+	position: absolute;
+	right: 25%;
+	top: 120%;
 }
 
-.question {
-	display: none;
-}
-
+/* Modal image for first question needs specific styling*/
 img[src="http://imgc.allpostersimages.com/images/P-473-488-90/61/6173/LSQG100Z/posters/moon-over-reynolds-building-winston-salem-north-carolina.jpg"] {
 	float: left;
+}
+
+/* Modal styles */
+.modal-body img, .modal-body h4 {
+	display: block;
+	max-width: 75%;
+	margin: 0 auto;
+}
+
+.modal-body h4 {
+	margin-top: 30px;
+	padding-left: 2%;
 }
 
 #first-explanation {
@@ -95,21 +137,7 @@ img[src="http://imgc.allpostersimages.com/images/P-473-488-90/61/6173/LSQG100Z/p
 	padding-bottom: 30px;
 }
 
-#questionPic {
-	width: 100%;
-	min-height: 350px;
-}
-
-.modal-body img, .modal-body h4 {
-	display: block;
-	max-width: 75%;
-	margin: 0 auto;
-}
-.modal-body h4 {
-	margin-top: 30px;
-	padding-left: 2%;
-}
-
+/* positioning and sizing for score page */
 .score {
 	display: none;
 }
@@ -122,5 +150,4 @@ img[src="http://imgc.allpostersimages.com/images/P-473-488-90/61/6173/LSQG100Z/p
 .score button, .score img {
 	display: block;
 	margin: 50px auto 0 auto;
-
 }

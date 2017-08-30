@@ -5,6 +5,7 @@ var score = 0;
 var zonkImg = "<img src='assets/zonk.png' alt='image of the text zonk' class='zonk'>";
 var cardBtn = '<button class="btn btn-success btn-lg card-btn" type="button"> Take the quiz! </button>';
 
+
 var shuffleCards = function () {
 	var a = Math.floor(Math.random()*100);
 	console.log(a);
@@ -34,6 +35,8 @@ function newGame() {
 $(".card-col").hide();
 	var b = document.getElementsByClassName("question");
     $(b).fadeIn(1000);
+    $(".progress-bar").css({'width': (((count+1)/questions.length)*75)+"%", 'visibility': 'visible'});
+    $(".progress-bar-border").css('visibility', 'visible');
 };
 
 $(".card-btn").click(function (){
@@ -43,6 +46,7 @@ $(".card-btn").click(function (){
 
 $(".next-btn").click(function() {
 	console.log("here kitty kitty");
+	var progress = (((count+2)/questions.length)*75)+"%";
 	$("#questionPic").attr('src', questions[count+1]["image_q"]);
 	for (var i=0; i<questions[count+1]["choices"].length; i++) {
 	$('#choice'+i).children('button').html(questions[count+1]["choices"][i]);
@@ -53,6 +57,8 @@ $(".next-btn").click(function() {
 	$(".modal-body").find("img").attr('src', questions[count+1]["image_a"]);
 	$("#explanation").html(questions[count+1]["explanation"]);
 	count++;
+	$(".progress-bar").css('width', progress);
+	
 	
 });
 
@@ -81,6 +87,8 @@ $(".modal").on('click','button', function(){
 		$(".question").hide();
 		$('#score-info').html("Congratulations on completing the quiz! Your score is " + score  + "/" + questions.length + ".");
 		$('.score').show();
+		$(".progress-bar").css({'visibility': 'hidden', 'width': 0});
+		$(".progress-bar-border").css('visibility', 'hidden');
 	}
 });
 
@@ -104,4 +112,7 @@ $(".score").on('click','button', function(){
 		newGame();
 		});
 });
+
+
+
 });
