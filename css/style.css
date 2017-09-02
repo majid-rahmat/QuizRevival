@@ -1,13 +1,30 @@
+body {
+background: #00467F;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to bottom, #A5CC82, #00467F);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to bottom, #A5CC82, #00467F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 /* typography */
+
 h1 {
 	text-align: center;
 	font-family: "Sedgwick Ave Display";
 	font-size: 4em;
+	color: white;
+	margin-top: 35px;
 }
+
+#instruction { 
+	color: white;
+	font-family: "Acme";
+	font-size: 2em;
+	text-align: center;
+ }
 
 .question {
 	font-family: "Acme";
 	letter-spacing: 0.05em;
+	color: white;
 }
 
 .question button {
@@ -16,49 +33,61 @@ h1 {
 	text-align: center;
 }
 
-/* progress bar: sizing, positioning, styling and initial visibility*/
-.progress-bar-border {
-	width: 75%;
-	border: 1px solid black;
-	height: 20px;
-	margin: 0 auto;
-	margin-top: 20px;
-	border-radius: 6%;
-	visibility: hidden;
+.card-btn {
+	letter-spacing: 0.15em;
 }
+
+/* progress bar: sizing, positioning, styling and initial visibility*/
 
 .progress-bar {
-	width: 0%;
-	background: #7b4397;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to left, #dc2430, #7b4397);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to left, #dc2430, #7b4397); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-	height: 20px;
-	border-radius: 6%;
-	position: relative;
-	left: 12.5%;
-	top: 10px;
-	visibility: hidden;
+width: 0%;
+background: #44A08D;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #093637, #44A08D);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #093637, #44A08D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+height: 20px;
+border-radius: 6%;
+display: none;
+margin-top: 40px;
 }
 
-/* sizing and positioning for the play cards (front and back) */
+/* styling sizing and positioning for the play cards (front and back) and #instruction*/
+
+#instruction {
+	padding-top: 40px;
+}
+
 .card {
 	height: 300px;
 	margin-top: 102px ;
 }
 
 .card-img-top {
+	display: block;
 	height: 300px;
-	width: 75%;
-	position: relative;
-	left: 45px;
+	margin: 0 auto;
 }
 
 .card-btn {
-	display: block;
-	position: relative;
-	left: 87.5px;
-	top: 127px;
+display: block;
+position: relative;
+left: 62.26px;
+top: 127px;
+background: #A5CC82;
+border: 1px solid #00467F;
 } 
+
+.first-card {
+margin-left: 80px;
+}
+
+.last-card {
+margin-right: 80px;
+}
+
+.card-btn:hover {
+background: #A5CC82; 
+border: 1px solid #00467F;
+}
 
 .zonk {
  	position: relative;
@@ -66,25 +95,28 @@ h1 {
  	top: 25px;
 }
 
-
 .jumbotron {
+	background: url("http://novafitness.in/wp-content/uploads/2015/02/snookar-cloth-first-grade.jpg");
 	margin-top: 20px;
-	height: 600px;
+	padding-top: 0px;
 }
 
-/* first question image needs it's own specific styling */
-img[src="assets/EmpireState_Question1.jpg"] {
-	height: 500px;
-}
 
 /* sizing and positioning for question image, question and it's answer choices */
+
+.main-row {
+	min-height: 450px;
+}
+
 .question {
 	display: none;
+	margin-top: 40px;
 }
 
 #questionPic {
 	width: 100%;
 	min-height: 350px;
+	max-height: 400px;
 }
 
 h3 {
@@ -109,14 +141,18 @@ ul li:first-child > button {
 
 /* positioning for next-question button */
 .next-btn {
-	position: absolute;
-	right: 25%;
-	top: 120%;
+	display: none;
+	margin-left: 77%;
+}
+
+.btn-row {
+	margin-top: 20px;
 }
 
 /* Modal image for first question needs specific styling*/
 img[src="http://imgc.allpostersimages.com/images/P-473-488-90/61/6173/LSQG100Z/posters/moon-over-reynolds-building-winston-salem-north-carolina.jpg"] {
 	float: left;
+
 }
 
 /* Modal styles */
@@ -143,8 +179,10 @@ img[src="http://imgc.allpostersimages.com/images/P-473-488-90/61/6173/LSQG100Z/p
 }
 
 .score h3 {
+	margin-top: 40px;
 	width: 100%;
 	text-align: center;
+	color: white;
 }
 
 .score button, .score img {

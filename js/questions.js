@@ -4,7 +4,7 @@ var questions = [
          choices: ["The White House", "Sears Tower", "Reynolds Building", "Chrysler Building"],
          answer: "Reynolds Building",
          explanation: "When completed as the headquarters of R. J. Reynolds Tobacco Company, it was the tallest building in the United States south of Baltimore, Maryland, and it won a national architecture award. The building is well known for being a design inspiration for the much larger Empire State Building that was built in 1931 in New York City. Every year the staff of the Empire State Building sends a Father's Day card to the staff at the Reynolds Building in Winston-Salem to pay homage to its role as predecessor to the Empire State Building.",
-         image_q: "http://site.familyinnewyork.com/blog/wp-content/uploads/2008/11/empire-state-building3.jpg",
+         image_q: "http://s3.citypass.net/img-f6f7aa1/products/new-york/thumbs/t-empire.jpg",
          image_a: "http://imgc.allpostersimages.com/images/P-473-488-90/61/6173/LSQG100Z/posters/moon-over-reynolds-building-winston-salem-north-carolina.jpg"            
         },
 
