@@ -11,28 +11,34 @@
 </head>
 <body>
 <h1>Welcome to the Random Trivia Quiz</h1>
-<div class="progress-bar"></div>
-<div class="progress-bar-border"></div>
+
+
   <div class="container">
     <div class="jumbotron">
+    
       <div class="row">
+		<div class="col-md-12 changing-row">
+			<h3 id="instruction"> One of these cards contains a button that starts the quiz! </h3>
+    		<div class="progress-bar"></div>
+		</div>	
+	  </div>
+
+	  <div class="row main-row">	
         <div class="col-md-4 card-col">
           <div class="card" >
             <div class="front"> 
-    		  <img class="card-img-top" src="https://media.giphy.com/media/SufoKsersIO2Y/giphy.gif" alt="Card image cap">
+    		  <img class="card-img-top first-card" src="https://i.pinimg.com/564x/f4/63/85/f463852e38a0a54e2dbfc267fed2042e.jpg" alt="Card image cap">
   		    </div> 
   		  	<div class="back" id="card1">
     	  	<!-- this is where the zonk or start quiz button are generated -->
     	  	</div>
      	  </div>	
      	</div>
-      
-    
     
       	<div class="col-md-4 card-col">
       	  <div class="card" >
             <div class="front"> 
-    		  <img class="card-img-top" src="https://media.giphy.com/media/SufoKsersIO2Y/giphy.gif" alt="Card image cap">
+    		  <img class="card-img-top" src="https://i.pinimg.com/564x/f4/63/85/f463852e38a0a54e2dbfc267fed2042e.jpg" alt="Card image cap">
   		    </div> 
   		    <div class="back" id="card2">
     		<!-- this is where the zonk or start quiz button are generated -->
@@ -44,7 +50,7 @@
       	<div class="col-md-4 card-col">
           <div class="card" >
             <div class="front"> 
-    		 <img class="card-img-top" src="https://media.giphy.com/media/SufoKsersIO2Y/giphy.gif" alt="Card image cap">
+    		 <img class="card-img-top last-card" src="https://i.pinimg.com/564x/f4/63/85/f463852e38a0a54e2dbfc267fed2042e.jpg" alt="Card image cap">
   		  </div> 
   		    <div class="back" id="card3">
     	    <!-- this is where the zonk or start quiz button are generated -->
@@ -77,8 +83,22 @@
 				<button class="btn btn-lg btn-block btn-primary answer-btn" type="button"> Chrysler Building</button>
 			  </li>
     		</ul>
+    	</div>
+    	<!--questions removed after closing the modal corresponding to last question  and score page is displayed within the row of the jumbotron -->
+        
+    	<div class="score col-md-12">
+          <h3 id="score-info"></h3>
+          <img src="https://media.giphy.com/media/7rj2ZgttvgomY/giphy.gif" alt="stern and bearded Shia Labeouf clapping aggressively in a theater">
+		  <button class="btn btn-info btn-lg" type="button">Play Again</button>
+        </div>
+        <!--end of score page -->
+	</div>
+	    
+	<div class="row">
+    	<div class="col-md-12 btn-row">
     		<button class="btn btn-success btn-lg next-btn" disabled type="button">Next Question</button>
     	</div>
+    </div>
 
     	<!-- Modal shows up when you click on an answer, the Modal close button for the last question will hide the modal and question columns within the jumbotron and instead display the columns after the modal-->
 		<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -100,17 +120,12 @@
             </div>
           </div>
         </div>
-	    <!--questions removed after closing the modal corresponding to last question  and score page is displayed within the row of the jumbotron -->
-        <div class="score col-md-">
-          <h3 id="score-info"></h3>
-          <img src="https://media.giphy.com/media/7rj2ZgttvgomY/giphy.gif" alt="stern and bearded Shia Labeouf clapping aggressively in a theater">
-		  <button class="btn btn-info btn-lg" type="button">Play Again</button>
-        </div>
+	    
 
-	    <!--end of score page -->
+	    
 	  </div> 
     </div>
-  </div>
+
   <!-- Keep Out -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>

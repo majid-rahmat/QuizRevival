@@ -35,8 +35,10 @@ function newGame() {
 $(".card-col").hide();
 	var b = document.getElementsByClassName("question");
     $(b).fadeIn(1000);
-    $(".progress-bar").css({'width': (((count+1)/questions.length)*75)+"%", 'visibility': 'visible'});
-    $(".progress-bar-border").css('visibility', 'visible');
+    $(".next-btn").fadeIn(1000);
+    $(".progress-bar").css({'width': (((count+1)/questions.length)*100)+"%"});
+    $(".progress-bar").fadeIn(1000);
+    $("#instruction").hide();
 };
 
 $(".card-btn").click(function (){
@@ -46,7 +48,7 @@ $(".card-btn").click(function (){
 
 $(".next-btn").click(function() {
 	console.log("here kitty kitty");
-	var progress = (((count+2)/questions.length)*75)+"%";
+	var progress = (((count+2)/questions.length)*100)+"%";
 	$("#questionPic").attr('src', questions[count+1]["image_q"]);
 	for (var i=0; i<questions[count+1]["choices"].length; i++) {
 	$('#choice'+i).children('button').html(questions[count+1]["choices"][i]);
@@ -58,8 +60,6 @@ $(".next-btn").click(function() {
 	$("#explanation").html(questions[count+1]["explanation"]);
 	count++;
 	$(".progress-bar").css('width', progress);
-	
-	
 });
 
 $(".answer-btn").click(function(){
@@ -85,10 +85,10 @@ $(".answer-btn").click(function(){
 $(".modal").on('click','button', function(){
 	if (count==questions.length-1) {
 		$(".question").hide();
+		$(".next-btn").hide();
 		$('#score-info').html("Congratulations on completing the quiz! Your score is " + score  + "/" + questions.length + ".");
 		$('.score').show();
-		$(".progress-bar").css({'visibility': 'hidden', 'width': 0});
-		$(".progress-bar-border").css('visibility', 'hidden');
+		$(".progress-bar").hide();
 	}
 });
 
@@ -108,6 +108,7 @@ $(".score").on('click','button', function(){
 		$(".next-btn").attr({'class': "btn btn-success btn-lg next-btn", "disabled": true, 'type': "button"});
 		$(".modal-body").find("img").attr('src', questions[count]["image_a"]);
 		$("#explanation").html(questions[count]["explanation"]);
+		$("#instruction").show();
 		$(".card-btn").click(function (){
 		newGame();
 		});
