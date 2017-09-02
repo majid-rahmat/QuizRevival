@@ -98,17 +98,12 @@ border: 1px solid #00467F;
 .jumbotron {
 	background: url("http://novafitness.in/wp-content/uploads/2015/02/snookar-cloth-first-grade.jpg");
 	margin-top: 20px;
-	/*height: 650px;*/
 	padding-top: 0px;
 }
 
-/* first question image needs it's own specific styling */
-
-img[src="assets/EmpireState_Question1.jpg"] {
-	height: 500px;
-}
 
 /* sizing and positioning for question image, question and it's answer choices */
+
 .main-row {
 	min-height: 450px;
 }
@@ -121,6 +116,7 @@ img[src="assets/EmpireState_Question1.jpg"] {
 #questionPic {
 	width: 100%;
 	min-height: 350px;
+	max-height: 400px;
 }
 
 h3 {
